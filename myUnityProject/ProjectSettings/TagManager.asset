@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Collectible2
+  - Portal
   layers:
   - Default
   - TransparentFX
