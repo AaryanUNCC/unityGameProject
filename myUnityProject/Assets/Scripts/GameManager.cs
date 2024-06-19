@@ -12,4 +12,9 @@ public class GameManager : MonoBehaviour
         gemCollected++;
         gemUI.text = "Gem: " + gemCollected;
     }
+
+    public void Save()
+    {
+        PlayerPrefs.SetInt("Gems", gemCollected);
+    }
 }

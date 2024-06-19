@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class Player : MonoBehaviour
         {
             collision.gameObject.GetComponent<Gem>().OnGemCollected();
             gameManager.OnGemCollected();
+        }
+        else if (collision.gameObject.tag.Equals("Portal"))
+        {
+            gameManager.Save();
+            SceneManager.LoadScene("Menu");
         }
     }
 }
