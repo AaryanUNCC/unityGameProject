@@ -11,6 +11,7 @@ public class Gem : MonoBehaviour
 
     public void OnGemCollected()
     {
+        GetComponent<MeshRenderer>().enabled = false;
         audioSource.clip = gemSFX;
         audioSource.Play();
         float testLength = gemSFX.length;
