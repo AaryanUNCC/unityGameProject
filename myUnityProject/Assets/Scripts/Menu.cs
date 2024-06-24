@@ -15,8 +15,9 @@ public class Menu : MonoBehaviour
     }
     public void OnStartGame()
     {
-
+        int currentLevel = 1;
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         Debug.Log("OnStartButton Clicked");
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level" + currentLevel);
     }
 }

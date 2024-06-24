@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         else if (collision.gameObject.tag.Equals("Portal"))
         {
             gameManager.Save();
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameWin");
         }
     }
 }

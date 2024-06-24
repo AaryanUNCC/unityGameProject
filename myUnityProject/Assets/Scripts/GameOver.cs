@@ -15,7 +15,8 @@ public class GameOver : MonoBehaviour
     }
     public void Replay()
     {
-        SceneManager.LoadScene("Level1");
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        SceneManager.LoadScene("Level" + currentLevel);
     }
 
     public void Menu()
